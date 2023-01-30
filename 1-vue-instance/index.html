@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.js Practices</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div id="app">
+<h1>{{ title }}</h1>
+<p>{{ content }}</p>
+<a 
+v-bind:href="linkInfo.url" :target="linkInfo.target" :alt="linkInfo.alt"
+v:bind:mervebatman="owner">{{ linkInfo.title }}</a>
+<hr>
+<button v-on:click="changeTitle('Bu 1.buton')">Title Değiştir</button>
+<button v-on:click="changeTitle('Bu 2.buton')">Title 2 Değiştir</button>
+<hr>
+<div class="box" @mousemove="updateCoords('mouseMoveee', $event)"  @click="changeTitle('Box üzerine tıklandı.')"></div>
+
+<span>{{ coords.x }}, {{ coords.y }}</span>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
